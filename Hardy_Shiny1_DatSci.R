@@ -33,3 +33,20 @@ ui <- bootstrap(
   
   plotOutput("plot")
 )
+
+#define server code
+
+server <- function(input, output) {
+  output$plot <- renderPlot({
+    if (input$Type == "Histogram") {
+      hist(runif(input$n),
+           col = input$color,
+           main = "Histogram: Random Distribution",
+           xlab = "Value")
+    } else {
+      boxplot(runif(input$n),
+              col = input$color,
+              main = "Boxplot: Random Distribution",
+              ylab = "Value"))
+    }
+}}
