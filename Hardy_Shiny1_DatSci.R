@@ -17,8 +17,19 @@ ui <- bootstrap(
   radioButtons(inputID = "Type",
                label = "Type of Plot",
                choices = c("Histogram, Boxplot"),
-               selected = "Histogram"
-  radiotButtons(
-  numericInput(
-  plotOutput(
+               selected = "Histogram"),
+  
+  radiotButtons(inputID = "color",
+                label = "Color of Plot",
+                choices = c("Black" = "black",
+                            "Pink" = "pink",
+                            "Brown" = "brown",
+                            "Purple" = "purple"),
+                selected = "black"),
+  
+  numericInput('n',
+               'Observations',
+               n),
+  
+  plotOutput("plot")
 )
