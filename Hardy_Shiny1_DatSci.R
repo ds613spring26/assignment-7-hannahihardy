@@ -7,3 +7,20 @@
 
 pacman::p_load(shiny, tidyverse)
 
+#define observations
+
+observations <- 200
+
+#define UI
+
+ui <- bootstrap(
+  radioButtons(
+  radiotButtons(
+  numericInput(
+  plotOutput(
+    
+  )
+  )
+  )
+  )
+)
