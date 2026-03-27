@@ -14,13 +14,11 @@ observations <- 200
 #define UI
 
 ui <- bootstrap(
-  radioButtons(
+  radioButtons(inputID = "Type",
+               label = "Type of Plot",
+               choices = c("Histogram, Boxplot"),
+               selected = "Histogram"
   radiotButtons(
   numericInput(
   plotOutput(
-    
-  )
-  )
-  )
-  )
 )
