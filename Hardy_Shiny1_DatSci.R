@@ -23,6 +23,7 @@ ui <- fluidPage(
                 label = "Color of Plot Fill",
                 choices = c("Black" = "black",
                             "Pink" = "pink",
+                            "Red" = "red",
                             "Brown" = "brown",
                             "Purple" = "purple"),
                 selected = "black"),
@@ -60,5 +61,7 @@ server <- function(input, output) {
     }
   })
 }
+
+#return shiny app
 
 shinyApp(ui = ui, server = server)
